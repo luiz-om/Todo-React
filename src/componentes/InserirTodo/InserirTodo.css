@@ -1,0 +1,40 @@
+.Header{    
+    width: 100%;
+    height: 70px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HeaderRight{ 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.HeaderLeft {
+    margin-right: 10px;
+}
+
+.inputButon{
+    height: 41px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.inputColor {
+    height: 46px;
+    margin-right: 10px;
+    padding: 9px;
+}
+
+button {
+    width: 100px;
+    height: 26px;
+    color: #000;
+    background: yellow;
+    border: solid 1px #000;
+
+}

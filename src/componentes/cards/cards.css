@@ -1,0 +1,24 @@
+.fa {
+    position: absolute;
+    margin-left: 115px;
+    z-index: 99;
+    font-size: 26px;
+    transform: rotate(5deg);
+}
+
+.card {
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    border: 1px solid #86a5ba;
+    margin: 15px;
+    display: flex;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #333;
+    transform: rotate(2deg);
+    color: #fff;
+    text-align: justify;
+}

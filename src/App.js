@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+import InserirTodo from './componentes/InserirTodo/InserirTodo';
+import Pendentes from './componentes/Pendentes/Pendentes';
+import Concluidos from './componentes/Concluidos/Concluidos';
+import { useEffect, useState } from 'react/cjs/react.development';
+import Header from './componentes/Header/Header';
+
+export default function App() {
+  const [todoList, setTodoList] = useState([]);
+
+  useEffect(() => {
+    const list = localStorage.getItem('Todo');
+    setTodoList(JSON.parse(list))
+  }, [])
+
+  const pegarValor = (novaLista) => {
+    localStorage.setItem('Todo', JSON.stringify(novaLista));
+    setTodoList(novaLista)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <InserirTodo callback={pegarValor} />
+      <Pendentes
+        tituloSessao='Pendentes'
+        todoList={todoList}
+        callback={pegarValor}
+      />
+      <Concluidos
+        tituloSessao='Concluido'
+        todoList={todoList}
+      />
     </div>
   );
 }
 
-export default App;

@@ -1,0 +1,21 @@
+.Area {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border: 1px dotted #000;
+}
+
+.Titulo {
+    position: absolute;
+    margin-top: 5px;
+    left: 10px;
+}
+
+.Titulocc {
+    margin-top: 5px;
+    right: 10px;
+    position: absolute;
+}
